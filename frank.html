@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Frank Ocean Lyrics - Scrape It and See</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Emmanuel Rodriguez</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="about.html">About</a></li>
+								<li><a href="https://www.linkedin.com/in/emmanuel-a-rodriguez/">LinkedIn</a></li>
+								<li><a href="https://github.com/er-arcadio">GitHub</a></li>
+								<li><a href="https://er-arcadio.github.io/public/Emmanuel_Rodriguez_Resume.pdf">Resume</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<!-- <li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li> -->
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section> -->
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="anyrec.html">
+											<h3>Any Recommendations?</h3>
+											<p>A Podcast Recommender</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Frank Ocean Lyrics</h3>
+											<p>An NLP Analysis</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Predicting a Hit</h3>
+											<p>A Spotify Top 100 Classifier</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>My First Dive</h3>
+											<p>Analyzing NYC Subway Data</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">Frank Ocean Lyrics</a></h2>
+										<p>Topic Modeling an Artist's Discography</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2020-08-21">August 21, 2020</time>
+										<a href="about.html" class="author"><span class="name">Emmanuel Rodriguez</span><img src="images/Casual.jpg" alt="" /></a>
+									</div>
+								</header>
+
+								<blockquote>"All the things I didn't mean to say, I didn't mean to do, There were things you didn't need to say, You didn't need to" ~Frank Ocean</blockquote>
+								<p>Frank Ocean is one of the most inspirational modern day song writers in my view, and any fan would agree and tell you that “Blonde” is where you can find his best writing. As a songwriter, I find that the hardest part of the process is in fact developing quality lyrics. In this NLP project, the goal was to investigate what topics Frank Ocean sings/raps about across his entire discography, then more individually on his album “Blonde,” in order to hopefully foster inspiration in my writing and to see the “topical recipe” behind his masterful songs. Then, since the lyrics will have been scraped already, it would be fun to try some lyric generation in the style of Frank Ocean.</p>
+
+								<h2>Blonde</h2>
+								<span class="image featured"><img src="images/Clusters.png" alt="" /></span>
+								<p>First, I'll walk you through the results for the analaysis on his songs in blonde. In the legend at the top right, you'll see the 3 topics that were generated after topic modeling just the one album using TF-IDF and NMF: red, the topic of working hard with attitude, yellow, the topic of hopelessness and insecurity, and blue, the topic of escapism and the potential future. I personally chose these topic titles based on the top 10 most frequent words of each topic and with the help of a little content knowledge. The most frequent words for each topic are as follows:</p>
+								<ul>
+									<li><b>Red</b> - night, got, and <i>a lot of curse words</i></li>
+									<li><b>Yellow</b> - solo, inhale, hard, kid, and I'm (I am)</li>
+									<li><b>Blue</b> - life, dream, love, anything, and I'd (I would)</li>
+								</ul>
+								<p>Each pie charts represent an individual cluster, that was done through KMeans Clustering, and the “dose” of each topic that makes up that cluster. The first, third, and fourth cluster all consist of greater than 90% of the red, yellow, and blue topic, respectively. This implies that the songs in these clusters are transparently aligned with their respective topics. For example, a song that would be in the mostly yellow cluster, “Lonely Songs,” would be “Solo,” a song mostly about loneliness. The second cluster, or pie chart, is a mix of 76% escapism (blue) and 24% hard work (red) and, therefore, could be thought of as “Run Away Songs” (in other words, “working hard at esaping”).</p>
+
+								<h2>Frank Ocean's Lyrics Over Time</h2>
+								<span class="image featured"><img src="images/HBarGraph.png" alt="" /></span>
+								<p>For the entire discography, I did the same process as above: I scraped all of Frank Ocean's song lyrics from the internet, and I used TF-IDF and NMF to topic model over documents. After, instead of clustering, I grouped the songs based on album and analyzed how the album's average topic distribution changed over time. Above, you can see the two most prominantly changing topics. The topic "Naive Lover," with words like love, sucker, and baby, decreased in popularity as Ocean matured. Meanwhile, the topic "All Good," with words like life, sweet, and best, increased as time progressed. This may speak to how Frank Ocean started his carreer as a naive lover, but he learned from his mistakes and things turned out alright, hence "All Good."</p>
+								<hr />
+
+								<blockquote>"Wishin away the rhythm on. The rate is sky, but yea I'm up here. Spaceships" ~Markov Chains</blockquote>
+								<p>After finding that Frank Ocean is no longer naive, I played around with a couple of naive approaches myself on text regeneration. The idea with Markov Chains is that for every word written by Ocean, there is a probability for each word that he chooses to followed it with. For example, if he says <i>I'm</i> he could possibly say I'm up, I'm not, or I'm everything, but would never say I'm you're, I'm but, etc. So if we start with one word, "Wishin' in the example above, and let probability do the rest, we come up with some cool/fun Markov Chains in the style of Frank Ocean.</p>
+
+								<h3>Looking for more?</h3>
+								<p>You can find the jupyter notebooks and python code I worked on, and more details and examples on this <a href="https://github.com/er-arcadio/Topic_Modeling_Frank_Ocean_Lyrics">GitHub</a> page.</p>
+
+								<!-- <footer>
+									<ul class="stats">
+										<li><a href="#">General</a></li>
+										<li><a href="#" class="icon solid fa-heart">28</a></li>
+										<li><a href="#" class="icon solid fa-comment">128</a></li>
+									</ul>
+								</footer>	-->
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+								<ul class="icons">
+									<li><a href="https://er-arcadio.github.io/public/Emmanuel_Rodriguez_Resume.pdf" class="fas fa-file-alt"><span class="label">Resume</span></a></li>
+									<li><a href="https://www.linkedin.com/in/emmanuel-a-rodriguez/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/er-arcadio" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+								<p class="copyright">&copy;ScrapeItAndSee. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
+							</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
