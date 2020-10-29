@@ -14,6 +14,8 @@ Edit the specific pages at the following links...
 
 2. [About](https://github.com/ScrapeItAndSee/ScrapeItAndSee.github.io/blob/main/about.html)
 
+3. [Contact Me](https://github.com/ScrapeItAndSee/ScrapeItAndSee.github.io/blob/main/contact.html)
+
 3. All the actual blog posts
     - [Any Recommendations?](https://github.com/ScrapeItAndSee/ScrapeItAndSee.github.io/blob/main/anyrec.html)
     - [Frank Lyrics](https://github.com/ScrapeItAndSee/ScrapeItAndSee.github.io/blob/main/frank.html)
